@@ -1,0 +1,98 @@
+{
+	"name": "nxformula",
+	"scopeName": "source.nxformula",
+	"patterns": [
+	  { "include": "#keywords" },
+	  { "include": "#strings" },
+	  { "include": "#comments" },
+	  { "include": "#variables" },
+	  { "include": "#operators" },
+	  { "include": "#delimiters" }
+	],
+	"repository": {
+	  "keywords": {
+		"patterns": [
+		  {
+			"name": "keyword.control.nxformula",
+			"match": "\\b(RETURN|LET|EACH)\\b"
+		  },
+		  {
+			"name": "constant.language.boolean.false.nxformula",
+			"match": "\\bFALSE\\b"
+		  },
+		  {
+			"name": "constant.language.boolean.true.nxformula",
+			"match": "\\bTRUE\\b"
+		  },
+		  {
+			"name": "keyword.other.nxformula",
+			"match": "\\b(APPLY|ARRAY|ARRAY_CONCAT|ARRAY_DISTINCT|ARRAY_FIRST|ARRAY_GROUP|ARRAY_INDEX|ARRAY_INDEXOF|ARRAY_INTERSECT|ARRAY_JOIN|ARRAY_LAST|ARRAY_LENGTH|ARRAY_PAD|ARRAY_REVERSE|ARRAY_ROLLUP|ARRAY_SELECT|ARRAY_SELECTMANY|ARRAY_SKIP|ARRAY_SLICE|ARRAY_SORT|ARRAY_SORTDESC|ARRAY_TAKE|ARRAY_TRANSPOSE|ARRAY_WHERE|CALL|RANGE|CURRENT_EACHLOADEDVALUE|CURRENT_EACHVALUE|CURRENT_LOADEDVALUE|CURRENT_VALUE|DATE|DATEADD|DATEDIFF_PARTS|DAY|DAYOFWEEK|DAYOFYEAR|FINANCIALYEAR|HOUR|ISWEEKDAY|MINUTE|MONTH|NOW|SECOND|TODAY|WEEKOFYEAR|WORKDAY|WORKDAYSBETWEEN|YEAR|DB_ENCODECONSTANT|DB_ENCODEIDENTIFIER|DB_GETCOLUMNS|DB_GETEFORMS|DB_LOOKUP|DB_LOOKUPALL|DB_REPORT|EBMS_GET_PARENT_RECORDID|EBMS_URL_ENCODE|WEEKDAYSBETWEEN|DEPT_COLLECT_CONTAINERS|DEPT_CONTAINS|DEPT_FIND_UPWARDS_FOR_DEPARTMENT|DEPT_FIND_UPWARDS_FOR_USER|BASE64ENCODE|EBMS_CLEAN_USERNAME|EBMS_CONTAINS|EBMS_EFORMFILE_BASE64|EBMS_ENDSWITH|EBMS_GET_ACCESSIBLE_RECORDS_FOR_USER|EBMS_GET_ANCESTOR_ROLES|EBMS_GET_ATTACHMENTS|EBMS_GET_BASE_URL|EBMS_GET_CHILD_RECORD_COUNT|EBMS_GET_CHILD_RECORDS|EBMS_GET_CURRENT_ACTUAL_USER|EBMS_GET_CURRENT_AUTHORITY|EBMS_GET_CURRENT_USER|EBMS_GET_DESCENDANT_ROLES|EBMS_GET_EFORM_MAILMERGE_TEMPLATES|EBMS_GET_EFORMRECORD_ATTACHMENT_COUNT|EBMS_GET_EFORMRECORD_PERMISSION|EBMS_GET_EFORMRECORD_URL|EBMS_GET_FINANCIAL_YEAR_START|EBMS_GET_LAST_TRANSACTION_DATE|EBMS_GET_PARENT_RECORD|EBMS_GET_PREFERENCE|EBMS_GET_RANDOM_STRING|EBMS_GET_ROLE_DISPLAYNAME|EBMS_GET_ROLE_EMAIL_ADDRESSES|EBMS_GET_ROLE_EXPIRYDATE|EBMS_GET_ROLE_FINANCIAL_APPROVAL_LIMIT|EBMS_GET_ROLE_PHONE|EBMS_GET_SUBSTITUTIONS|EBMS_GET_SUPERVISOR|EBMS_GET_SUPERVISORS|EBMS_GET_USER_DEPARTMENT|EBMS_GET_USER_POSITION|EBMS_GET_USER_TYPE|EBMS_IS_DIRECT_SUPERVISOR_OF|EBMS_IS_SUPERVISOR_OF|EBMS_IS_USER_IN_ROLE|EBMS_LAST_X_DAYS|EBMS_LOCAL_TIMEZONE_OFFSET|EBMS_PUBLICFILE_BASE64|EBMS_RECORDFILE_BASE64|EBMS_SAME_FINANCIAL_YEAR|EBMS_STARTSWITH|EBMS_USE_CREDENTIAL|EVALUATE|CLEAN_FILENAME|CONSOLEESCAPE|HTMLDECODE|HTMLENCODE|HTTPQUERYPARAMS|JSONDECODE|JSONENCODE|NEWUUID|NULL|TRAVERSE|URLDECODE|URLENCODE|VAR_DUMP|XMLENCODE|XMLPARSE|XPATH|ARRAY_TO_HASH|ARRAY_TO_HASH_GROUPED|HASH|HASH_GET|HASH_KEYS|HASH_MERGE|INDEXES_TO_KEYS|D|ERRORTEXT|GETTYPE|ISARRAY|ISBLANK|ISDATETIME|ISERROR|ISEVEN|ISHASH|ISLOGICAL|ISNONTEXT|ISNULL|ISNUMBER|ISODD|ISTEXT|N|AND|IF|IFERROR|NOT|OR|GET_EMAIL_TEMPLATES|ABS|AVERAGE|CEILING|COS|COUNT|DEGREES|EXP|FLOOR|INT|LN|LOG|LOG10|MAX|MIN|MOD|PI|POWER|PRODUCT|QUOTIENT|RADIANS|RAND|ROUND|ROUNDUP|SIGN|SIN|SUM|TAN|COALESCE|GREATEST|LEAST|LINENUMBER|MAXDATE|XOR|REGEX_MATCH|REGEX_MATCHES|REGEX_REPLACE|ROLE|CHAR|CODE|CONCATENATE|DATEFORMAT|FIND|FINDR|LEFT|LEN|LOWER|MID|NEWLINE|NUMBERFORMAT|PARSE_SIMPLE_SEARCH_TERMS|REPLACESUBSTRING|RIGHT|SPLIT|STRIPXML|T|TRIM|UPPER|VALUE)\\b"
+		  }
+		]
+	  },
+	  "strings": {
+		"name": "string.quoted.double.nxformula",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.nxformula",
+			"match": "\\\\."
+		  }
+		]
+	  },
+	  "comments": {
+		"patterns": [
+		  {
+			"name": "comment.line.double-slash.nxformula",
+			"match": "//.*$"
+		  },
+		  {
+			"name": "comment.block.nxformula",
+			"begin": "/\\*",
+			"end": "\\*/"
+		  }
+		]
+	  },
+	  "variables": {
+		"patterns": [
+		  {
+			"name": "variable.other.nxformula",
+			"match": "\\$([a-zA-Z_][a-zA-Z0-9_]*)"
+		  },
+		  {
+			"name": "variable.language.nxformula",
+			"match": "\\$(eventargs|count)"
+		  }
+		]
+	  },
+	  "operators": {
+		"patterns": [
+		  {
+			"name": "keyword.operator.nxformula",
+			"match": ":=|,"
+		  }
+		]
+	  },
+	  "delimiters": {
+		"patterns": [
+		  {
+			"name": "punctuation.definition.bracket.square.nxformula",
+			"match": "\\[|\\]"
+		  },
+		  {
+			"name": "punctuation.definition.bracket.round.nxformula",
+			"match": "\\(|\\)"
+		  },
+		  {
+			"name": "punctuation.definition.bracket.curly.nxformula",
+			"match": "\\{|\\}"
+		  },
+		  {
+			"name": "punctuation.terminator.statement.nxformula",
+			"match": ";"
+		  }
+		]
+	  }
+	}
+  }
