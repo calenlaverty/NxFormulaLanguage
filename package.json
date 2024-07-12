@@ -3,6 +3,7 @@
 	"displayName": "NimblexFormula",
 	"description": "VendorPanel",
 	"version": "1.0.0",
+	"repository": "https://github.com/calenlaverty/NxFormulaLanguage",
 	"engines": {
 		"vscode": "^1.91.0"
 	},
