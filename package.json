@@ -23,7 +23,7 @@
 					"Nimblex Formula",
 					"nxformula"
 				],
-				"extensions": [".nxformula", ".txt", ".md"]
+				"extensions": [".nxformula", ".txt"]
 			},
 			{
 				"id": "plaintext",
