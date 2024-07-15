@@ -12,8 +12,7 @@
 	],
 	"activationEvents": [
 		"onLanguage:plaintext",
-		"onLanguage:nxformula",
-		"onLanguage:markdown"
+		"onLanguage:nxformula"
 	],
 	"main": "./client/out/extension",
 	"contributes": {
@@ -30,11 +29,6 @@
 				"id": "plaintext",
 				"extensions": [".txt"],
 				"aliases": ["Plain Text", "txt"]
-			},
-			{
-				"id": "markdown",
-				"extensions": [".md", ".markdown"],
-				"aliases": ["Markdown", "md"]
 			}
 		],
 		"grammars": [
@@ -45,11 +39,6 @@
 			  },
 			  {
 				"language": "plaintext",
-				"scopeName": "source.nxformula",
-				"path": "./syntaxes/nxformula.tmLanguage.json"
-			  },
-			  {
-				"language": "markdown",
 				"scopeName": "source.nxformula",
 				"path": "./syntaxes/nxformula.tmLanguage.json"
 			  }

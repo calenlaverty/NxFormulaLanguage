@@ -1,28 +1,12 @@
 # NxFormula Language Support for VS Code
 
-This extension adds language support for NxFormula in Visual Studio Code, providing syntax highlighting for NxFormula code within Markdown files.
+This extension adds language support for NxFormula in Visual Studio Code, providing syntax highlighting for NxFormula code within .txt and .nxformula files.
 
 ## Features
 
-- Syntax highlighting for NxFormula code in Markdown files
-- Support for NxFormula code blocks and inline code in Markdown
-- Custom language grammar for improved Markdown and NxFormula integration
+- Syntax highlighting for NxFormula code in .TXT and .NXFORMULA files
 
 ## Usage
-
-### In Markdown Files
-
-You can use NxFormula syntax highlighting in your Markdown files in two ways:
-
-1. Fenced Code Blocks:
-   ```markdown
-   ```nxformula
-   LET $a := test;
-   RETURN $a
-
-
-   2. Inline Code:
-`` `nxformula LET $a := test;` ``
 
 ## Installation
 
@@ -31,7 +15,7 @@ You can use NxFormula syntax highlighting in your Markdown files in two ways:
 
 ## Configuration
 
-No additional configuration is required. The extension automatically recognizes NxFormula code within Markdown files.
+No additional configuration is required. 
 
 ## Known Issues
 
@@ -43,8 +27,8 @@ No additional configuration is required. The extension automatically recognizes 
 
 Initial release of NxFormula language support for VS Code.
 
-- Added syntax highlighting for NxFormula in Markdown files
-- Implemented custom grammar for Markdown and NxFormula integration
+- Install the extension from the VS Code Marketplace or by using a VSIX file.
+- Reload VS Code after installation.
 
 ## Contributing
 
@@ -56,4 +40,4 @@ If you'd like to contribute to this extension, please [provide instructions or l
 
 ---
 
-**Enjoy using NxFormula in your Markdown files!**# NxFormulaLanguage
+**Enjoy using NxFormula in your TXT and NXFORMULA files!**# NxFormulaLanguage

@@ -37,8 +37,7 @@ export function activate(context: ExtensionContext) {
 		// Register the server for plain text documents
 		documentSelector: [
 			{ scheme: 'file', language: 'plaintext' },
-			{ scheme: 'file', language: 'nxformula' },
-			{ scheme: 'file', language: 'markdown' }
+			{ scheme: 'file', language: 'nxformula' }
 		  ],
 		  synchronize: {
 			// Notify the server about file changes to '.clientrc files contained in the workspace
